@@ -13,8 +13,6 @@ Power to the system is supplied via a 3.3V input, which can originate either fro
 The system communicates actively with two other boards to maintain synchronization and operational awareness. It will send regular state updates to one board, allowing it to track the camera’s status and performance. It can also  receive commands from a second board to turn the camera on or off, enabling control across a multi-device interface.
 
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
-
 
 ## Block Diagram 
 
