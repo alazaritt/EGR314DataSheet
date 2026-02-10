@@ -1002,84 +1002,68 @@
 <tr>
 <th>ESP Info</th>
 <th>Answer</th>
-<th>Help</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
 <td>ESP32-S3-WROOM-1-N4</td>
-<td></td>
 </tr>
 <tr>
 <td>Product Page URL</td>
 <td>ESP32-S3-WROOM-1-N4 <a href="https://www.espressif.com/en/products/modules/esp32-s3-wroom-1">Product Page</a></td>
-<td></td>
 </tr>
 <tr>
 <td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
 <td>ESP32-S3-WROOM-1-N4 <a href="https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Datasheet</a></td>
-<td></td>
 </tr>
 <tr>
 <td>ESP32 S3 Datasheet URL</td>
 <td>ESP32 S3 <a href="https://documentation.espressif.com/esp32-s3_datasheet_en.pdf">Datasheet</a></td>
-<td></td>
 </tr>
 <tr>
 <td>ESP32 S3 Technical Reference Manual URL</td>
 <td>ESP32 S3 <a href="https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf">Technical Reference Manual</a></td>
-<td></td>
 </tr>
 <tr>
 <td>Vendor link</td>
 <td>Part can be found <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">here</a></td>
-<td></td>
 </tr>
 <tr>
 <td>Code Examples</td>
 <td>The following repositories contain references and examples for camera use and SPI communication <a href="https://github.com/espressif/esp-idf/tree/master/examples">1</a> <a href="https://github.com/espressif/esp32-camera">2</a></td>
-<td></td>
 </tr>
 <tr>
 <td>External Resources URL(s)</td>
 <td>This <a href="https://www.youtube.com/watch?v=G6MROvlLeKE">video</a> shows how to use a camera with an ESP32</td>
-<td></td>
 </tr>
 <tr>
 <td>Unit cost</td>
 <td>$5.06</td>
-<td></td>
 </tr>
 <tr>
 <td>Absolute Maximum Current for entire IC</td>
 <td>1.1 A</td>
-<td></td>
 </tr>
 <tr>
 <td>Supply Voltage Range</td>
 <td>Min: 3.0 V <br>Nominal: 3.3 V<br>Max: 3.6 V<br>Absolute Max: 3.6 V</td>
-<td></td>
 </tr>
 <tr>
 <td>Absolute Maximum current <br> (for entire IC)</td>
 <td>1.5A</td>
-<td></td>
 </tr>
 <tr>
 <td>Maximum GPIO current <br> (per pin)</td>
 <td>40 mA</td>
-<td></td>
 </tr>
 <tr>
 <td>Supports External Interrupts?</td>
 <td>Yes (on most GPIO pins)</td>
-<td></td>
 </tr>
 <tr>
 <td>Required Programming Hardware, Cost, URL</td>
 <td>USB cable <br>Cost: $3.67<br>  <a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/24508/22321088?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLlh1Tbp4mMm-KRkdY0tp4aE4j&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglMUt9YNMxXbo9cCV_Mz9d8SoXXu6UsXyn7V7zAz9T4bsDBuVud988aAuN6EALw_wcB">URL</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1096,8 +1080,8 @@
 <tr>
 <td>UART</td>
 <td>3</td>
-<td>1</td>
-<td>?</td>
+<td>2</td>
+<td>GPIO 43 (TX), GPIO 44 (RX)</td>
 </tr>
 <tr>
 <td>external SPI*</td>
@@ -1108,14 +1092,14 @@
 <tr>
 <td>I2C</td>
 <td>2</td>
-<td>1</td>
-<td>?</td>
+<td>2</td>
+<td>GPIO 8 (SDA), GPIO 9 (SCL)</td>
 </tr>
 <tr>
 <td>GPIO</td>
 <td>45</td>
 <td>15</td>
-<td>?</td>
+<td>GPIO 5–16, others flexible</td>
 </tr>
 <tr>
 <td>ADC</td>
@@ -1139,13 +1123,7 @@
 <td>USB Programmer</td>
 <td>1</td>
 <td>1</td>
-<td>?</td>
-</tr>
-<tr>
-<td>...</td>
-<td></td>
-<td></td>
-<td></td>
+<td>GPIO 19 (V−), GPIO 20 (V+)</td>
 </tr>
 </tbody>
 </table>
