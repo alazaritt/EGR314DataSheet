@@ -2,8 +2,8 @@
 title: Appendix - Controller Table for the ESP32
 ---
 
-| ESP Info                                      | Answer | Help                                                                                                      |
-| --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| ESP Info                                      | Answer                                                                                                    |
+| --------------------------------------------- | ------ |
 | Model                                         |   ESP32-S3-WROOM-1-N4   | 
 | Product Page URL                              |  ESP32-S3-WROOM-1-N4 [Product Page](https://www.espressif.com/en/products/modules/esp32-s3-wroom-1)      |  
 | ESP32-S3-WROOM-1-N4 Datasheet URL             |  ESP32-S3-WROOM-1-N4 [Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)    |
@@ -22,15 +22,14 @@ title: Appendix - Controller Table for the ESP32
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
 | -------------- | ----------- | ------ | ------------------------------ |
-| UART           | 3           | 1      | ?                              |
+| UART           | 3           | 2      | GPIO 43 (TX), GPIO 44 (RX)                              |
 | external SPI\* | 2           | 0      | N/A                              |
-| I2C            | 2           | 1      | ?                              |
-| GPIO           | 45           | 15      | ?                              |
+| I2C            | 2           | 2      | GPIO 8 (SDA), GPIO 9 (SCL)                              |
+| GPIO           | 45           | 15      | GPIO 5–16, others flexible                              |
 | ADC            | 20           | 0      | N/A                              |
 | LED PWM        | 16           | 0      | N/A                              |
 | Motor PWM      | 16           | 0      | N/A                              |
-| USB Programmer | 1           | 1      | ?                              |
-| ...            |
+| USB Programmer | 1           | 1      | GPIO 19 (V−), GPIO 20 (V+)                              |
 
 
 
