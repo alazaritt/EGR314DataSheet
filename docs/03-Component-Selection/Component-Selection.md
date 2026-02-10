@@ -27,11 +27,6 @@ For more details, review the ["Appendix - Component Selection Process - Sensor"]
 For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
 
 -----------
-> Remove the following before submitting! Use them to present the selected components
-
-### Style 1
-
-> This is the example found in the assignment, uses more html
 
 *Table 1: Example component selection*
 
@@ -46,23 +41,3 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 **Choice:** Option 3: LM2575T‑3.3V switching regulator
 **Rationale:** The LM2575T‑3.3G is a simple and reliable 3.3 V regulator that can deliver up to 1 A from a wide input range (4.75–40 V). Its switching design is more efficient than linear regulators, reducing heat when stepping down from higher voltages. It is reliable and shold be easy to implement and integrate into circuits.
 
-### Style 2
-
-> Also acceptable, more markdown friendly
-
-**External Clock Module**
-
-1. XC1259TR-ND surface mount crystal
-
-    ![](image1.png)
-
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
-
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
-
-**Rationale:** A clock oscillator is easier ...
