@@ -4,12 +4,12 @@ title: Appendix - Controller Table for the ESP32
 
 | ESP Info                                      | Answer | Help                                                                                                      |
 | --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| Model                                         | ?      | Include the entire part number (leave off any letters at the end that specify the package type)           |
-| Product Page URL                              | ?      | Found on Espressif.com                                                                                    |
-| ESP32-S3-WROOM-1-N4 Datasheet URL             | ?      | Do not paste links directly into the table.  Use a [link](#)                                              |
-| ESP32 S3 Datasheet URL                        | ?      | Has more detail on functions                                                                              |
-| ESP32 S3 Technical Reference Manual URL       | ?      | Has details on I/O multiplexing, USB, and others                                                          |
-| Vendor link                                   | ?      | Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a [link](#)                       |
+| Model                                         |   ESP32-S3-WROOM-1-N4   | 
+| Product Page URL                              |  ESP32-S3-WROOM-1-N4 Product Page[https://www.espressif.com/en/products/modules/esp32-s3-wroom-1]      |  
+| ESP32-S3-WROOM-1-N4 Datasheet URL             |  ESP32-S3-WROOM-1-N4 Datasheet[https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf]    |
+| ESP32 S3 Datasheet URL                        | ESP32 S3 Datasheet[https://documentation.espressif.com/esp32-s3_datasheet_en.pdf]      | 
+| ESP32 S3 Technical Reference Manual URL       | ESP32 S3 Technical Reference Manual[https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf]        |
+| Vendor link                                   | Part can be found here[]      | 
 | Code Examples                                 | ?      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
 | External Resources URL(s)                     | ?      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
 | Unit cost                                     | ?      | Find on Digikey, Jameco, MPJA, or octopart                                                                |
