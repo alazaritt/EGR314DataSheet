@@ -10,23 +10,23 @@ title: Appendix - Controller Table for the ESP32
 | ESP32 S3 Datasheet URL                        | ESP32 S3 [Datasheet](https://documentation.espressif.com/esp32-s3_datasheet_en.pdf)      | 
 | ESP32 S3 Technical Reference Manual URL       | ESP32 S3 [Technical Reference Manual](https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf)      |
 | Vendor link                                   | Part can be found [here](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      | 
-| Code Examples                                 | ?      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
-| External Resources URL(s)                     | ?      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
-| Unit cost                                     | $5.06      | Find on Digikey, Jameco, MPJA, or octopart                                                                |
-| Absolute Maximum Current for entire IC        | 1.1 A      | Find in the microcontroller datasheet                                                                     |
-| Supply Voltage Range                          | Min: 3.0 V <br>Nominal: 3.3 V<br>Max: 3.6 V<br>Absolute Max: 3.6 V      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                 |
-| Absolute Maximum current <br> (for entire IC) | 1.5A      | as found in datasheet                                                                                     |
-| Maximum GPIO current <br> (per pin)           | 40 mA      | as found in datasheet                                                                                     |
-| Supports External Interrupts?                 | Yes (on most GPIO pins)      | as found in datasheet                                                                                     |
-| Required Programming Hardware, Cost, URL      | ?      | as found in datasheet                                                                                     |
+| Code Examples                                 | The following repositories contain references and examples for camera use and SPI communication [1](https://github.com/espressif/esp-idf/tree/master/examples) [2](https://github.com/espressif/esp32-camera)      |
+| External Resources URL(s)                     | This [video](https://www.youtube.com/watch?v=G6MROvlLeKE) shows how to use a camera with an ESP32      | 
+| Unit cost                                     | $5.06      | 
+| Absolute Maximum Current for entire IC        | 1.1 A      | 
+| Supply Voltage Range                          | Min: 3.0 V <br>Nominal: 3.3 V<br>Max: 3.6 V<br>Absolute Max: 3.6 V      | 
+| Absolute Maximum current <br> (for entire IC) | 1.5A      | 
+| Maximum GPIO current <br> (per pin)           | 40 mA      | 
+| Supports External Interrupts?                 | Yes (on most GPIO pins)      | 
+| Required Programming Hardware, Cost, URL      | USB cable <br>Cost: $3.67<br>  [URL](https://www.digikey.com/en/products/detail/sparkfun-electronics/24508/22321088?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLlh1Tbp4mMm-KRkdY0tp4aE4j&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglMUt9YNMxXbo9cCV_Mz9d8SoXXu6UsXyn7V7zAz9T4bsDBuVud988aAuN6EALw_wcB)   |                                                                                 
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
 | -------------- | ----------- | ------ | ------------------------------ |
-| UART           | 3           | ?      | ?                              |
-| external SPI\* | 2           | ?      | ?                              |
-| I2C            | 2           | ?      | ?                              |
-| GPIO           | 45           | ?      | ?                              |
-| ADC            | 20           | ?      | ?                              |
+| UART           | 3           | 1      | ?                              |
+| external SPI\* | 2           | 0      | N/A                              |
+| I2C            | 2           | 1      | ?                              |
+| GPIO           | 45           | 15      | ?                              |
+| ADC            | 20           | 0      | N/A                              |
 | LED PWM        | 16           | 0      | N/A                              |
 | Motor PWM      | 16           | 0      | N/A                              |
 | USB Programmer | 1           | 1      | ?                              |
