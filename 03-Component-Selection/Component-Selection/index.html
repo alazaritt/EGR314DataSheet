@@ -960,13 +960,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6286/150%7EC04-034%7EAB%7E3.jpg?hidebanner=true" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6286/150%7EC04-034%7EAB%7E3.jpg?hidebanner=true"></a><br> TC1264-3.3VAB<br>$1.33/each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/TC1264-3.3VAB/442615?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20790518593&amp;gbraid=0AAAAADrbLli0ZT-PF-PBunQ9vVqrEbgw6&amp;gclid=CjwKCAiAqKbMBhBmEiwAZ3UboBYWfaOkWoOk2i8Dx9zRFfUYjNxC4Bj-PdhP4Dzw3kDAWWd71TOCJxoCmtIQAvD_BwE">link to product</a></td>
+<td>* High output capacity<br>* Built in protection for over-current and temperature<br>* Wide Operating Range</td>
+<td>* High Dropout Voltage<br>* Inefficient for power sensitive designs<br>* Difficult with non-through hole designs</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg"></a><br> AP63203WU-7 IC 3.3V 2A TSOT23-6<br>$0.77/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link to product</a></td>
+<td>* Inexpensive<br>* Compact SMT Package<br>* Wide Input Voltage Range</td>
+<td>* Requires external components <br>* Layout Sensitive<br>*Poor heat dissipation at high Vin.</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/488%7E314D-04%7ET%2CTQ%7E5.jpg?hidebanner=true" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/488%7E314D-04%7ET%2CTQ%7E5.jpg?hidebanner=true"></a><br> LM2575T-3.3G<br>$2.51/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link to product</a></td>
+<td>* Wide Input Voltage Range<br>* Simple external components<br>* Efficient switching design</td>
+<td>* More expensive <br>* Not surface mount<br>*Lower switching frequency</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Choice:</strong> Option 3: LM2575T‑3.3V switching regulator
+<strong>Rationale:</strong> The LM2575T‑3.3G is a simple and reliable 3.3 V regulator that can deliver up to 1 A from a wide input range (4.75–40 V). Its switching design is more efficient than linear regulators, reducing heat when stepping down from higher voltages. It is reliable and shold be easy to implement and integrate into circuits.</p>
 <h3 id="style-2">Style 2</h3>
 <blockquote>
 <p>Also acceptable, more markdown friendly</p>
