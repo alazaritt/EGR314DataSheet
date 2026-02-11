@@ -930,19 +930,19 @@
 <td>* Not ideal for high resolution images<br>* Fixed focus<br>* Requires careful wiring to reduce noise</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg"></a><br> OV5640 5 MP<br>$0.77/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link to product</a></td>
-<td>* Inexpensive<br>* Compact SMT Package<br>* Wide Input Voltage Range</td>
-<td>* Requires external components <br>* Layout Sensitive<br>*Poor heat dissipation at high Vin.</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/138/725/MFG_B0400_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/138/725/MFG_B0400_sml.jpg"></a><br> OV5640 5 MP<br>$40.92/each<br><a href="https://www.digikey.com/en/products/detail/arducam/B0400/19116509?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglpbaWs6xKmgRJQkk2K2B5ids20uMjPOvCeqMobiPXRw5iLrOl5xi8aAojIEALw_wcB">link to product</a></td>
+<td>* Easy to implement with ESP32<br>* Moderate resolution<br>* Supports autofocus</td>
+<td>* Idle power consumption <br>* May require complex software integration</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg"></a><br> TLV76133DCYR<br>$0.48/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TLV76133DCYR/18716969?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20228387720&amp;gbraid=0AAAAADrbLljWmZW5sdxv23XwNjtDfhxpY&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgnRhcYEEiF5ic2ROonZhhoX9dVTQM1dgRZhIbySp399Z6YhaxasOxwaAvqYEALw_wcB">link to product</a></td>
-<td>* High current capability<br>* Good output accuracy<br>* Wide Input Voltage Range</td>
-<td>* Moderate dropout voltage <br>*Poor heat dissipation at high Vin.</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/220/197/CAMERA-OV7670_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/220/197/CAMERA-OV7670_sml%28200x200%29.jpg"></a><br> CAMERA-OV7670<br>$5.92/each<br><a href="https://www.digikey.com/en/products/detail/olimex-ltd/CAMERA-OV7670/21662189?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=23410779255&amp;gbraid=0AAAAADrbLlhlt3SD16S1QgVRKgIqMNvJu&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglJn91DAUynbqBVx4kB63ikL1yjSF6BrEwIhMDMANKIyLXUkxM-Wd4aAs5aEALw_wcB">link to product</a></td>
+<td>* Inexpensive <br>* Less processing needed</td>
+<td>* Low resolution <br>*Complex wiring required<br>*Low frame rates</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 3: TLV76133DCYR 3.3V switching regulator
-<strong>Rationale:</strong> The TLV76133DCYR provides a stable and accurate 3.3 V output with  little design complexity. It can handle up to 1 A and  works over a wide input voltage range, fitting well with the available supply. It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.</p>
+<p><strong>Choice:</strong> Option 1: OV2640 camera
+<strong>Rationale:</strong> The ESP32-CAM OV2640 provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.</p>
 
 
 
