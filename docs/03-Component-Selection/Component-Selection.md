@@ -20,24 +20,32 @@ For more details, review the ["Appendix - Component Selection Process - Power Ma
 
 For more details, review the ["Appendix - Component Selection Process - Sensor"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor) selection.
 
-### Actuator
 
-(**remove this note/placeholder**: if applicable, this is where your **Selected** the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)
-
-For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
 
 -----------
 
-*Table 1: Example component selection*
+*Table 1: Component selection*
 
-**External Clock Module**
+**Voltage Regulator**
 
 | **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6286/150%7EC04-034%7EAB%7E3.jpg?hidebanner=true)<br> TC1264-3.3VAB<br>$1.33/each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/TC1264-3.3VAB/442615?gclsrc=aw.ds&gad_source=1&gad_campaignid=20790518593&gbraid=0AAAAADrbLli0ZT-PF-PBunQ9vVqrEbgw6&gclid=CjwKCAiAqKbMBhBmEiwAZ3UboBYWfaOkWoOk2i8Dx9zRFfUYjNxC4Bj-PdhP4Dzw3kDAWWd71TOCJxoCmtIQAvD_BwE)                 | \* High output capacity<br>\* Built in protection for over-current and temperature<br>\* Wide Operating Range                                               | \* High Dropout Voltage<br>\* Inefficient for power sensitive designs<br>\* Difficult with non-through hole designs |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg)<br> AP63203WU-7 IC 3.3V 2A TSOT23-6<br>$0.77/each<br>[link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)                 | \* Inexpensive<br>\* Compact SMT Package<br>\* Wide Input Voltage Range                                               | \* Requires external components <br>\* Layout Sensitive<br>\*Poor heat dissipation at high Vin. |
-| ![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/488%7E314D-04%7ET%2CTQ%7E5.jpg?hidebanner=true)<br> LM2575T-3.3G<br>$2.51/each<br>[link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)                 | \* Wide Input Voltage Range<br>\* Simple external components<br>\* Efficient switching design                                               | \* More expensive <br>\* Not surface mount<br>\*Lower switching frequency |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg)<br> TLV76133DCYR<br>$0.48/each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/TLV76133DCYR/18716969?gclsrc=aw.ds&gad_source=1&gad_campaignid=20228387720&gbraid=0AAAAADrbLljWmZW5sdxv23XwNjtDfhxpY&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgnRhcYEEiF5ic2ROonZhhoX9dVTQM1dgRZhIbySp399Z6YhaxasOxwaAvqYEALw_wcB)                 | \* High current capability<br>\* Good output accuracy<br>\* Wide Input Voltage Range                                               | \* Moderate dropout voltage <br>\*Poor heat dissipation at high Vin. |
 
-**Choice:** Option 3: LM2575T‑3.3V switching regulator
-**Rationale:** The LM2575T‑3.3G is a simple and reliable 3.3 V regulator that can deliver up to 1 A from a wide input range (4.75–40 V). Its switching design is more efficient than linear regulators, reducing heat when stepping down from higher voltages. It is reliable and shold be easy to implement and integrate into circuits.
+**Choice:** Option 3: TLV76133DCYR 3.3V switching regulator
+**Rationale:** The TLV76133DCYR provides a stable and accurate 3.3 V output with  little design complexity. It can handle up to 1 A and  works over a wide input voltage range, fitting well with the available supply. It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.
+
+**Camera**
+
+| **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| ![](https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg)<br> OV2640 2MP Camera Module<br>$6.99/each<br>[link to product](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html)                 | \* Good 2MP resolution<br>\* On‑chip JPEG compression<br>\* Easily compatible with ESP32 modules                                               | \* Not ideal for high resolution images<br>\* Fixed focus<br>\* Requires careful wiring to reduce noise |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg)<br> OV5640 5 MP<br>$0.77/each<br>[link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)                 | \* Inexpensive<br>\* Compact SMT Package<br>\* Wide Input Voltage Range                                               | \* Requires external components <br>\* Layout Sensitive<br>\*Poor heat dissipation at high Vin. |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg)<br> TLV76133DCYR<br>$0.48/each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/TLV76133DCYR/18716969?gclsrc=aw.ds&gad_source=1&gad_campaignid=20228387720&gbraid=0AAAAADrbLljWmZW5sdxv23XwNjtDfhxpY&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgnRhcYEEiF5ic2ROonZhhoX9dVTQM1dgRZhIbySp399Z6YhaxasOxwaAvqYEALw_wcB)                 | \* High current capability<br>\* Good output accuracy<br>\* Wide Input Voltage Range                                               | \* Moderate dropout voltage <br>\*Poor heat dissipation at high Vin. |
+
+**Choice:** Option 3: TLV76133DCYR 3.3V switching regulator
+**Rationale:** The TLV76133DCYR provides a stable and accurate 3.3 V output with  little design complexity. It can handle up to 1 A and  works over a wide input voltage range, fitting well with the available supply. It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.
+
 
