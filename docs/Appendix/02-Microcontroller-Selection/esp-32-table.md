@@ -11,7 +11,7 @@ title: Appendix - Controller Table for the ESP32
 | ESP32 S3 Technical Reference Manual URL       | ESP32 S3 [Technical Reference Manual](https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf)      |
 | Vendor link                                   | Part can be found [here](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      | 
 | Code Examples                                 | The following repositories contain references and examples for camera use and SPI communication [1](https://github.com/espressif/esp-idf/tree/master/examples) [2](https://github.com/espressif/esp32-camera)      |
-| External Resources URL(s)                     | This [video](https://www.youtube.com/watch?v=G6MROvlLeKE) shows how to use a camera with an ESP32      | 
+| External Resources URL(s)                     | This [video](https://www.youtube.com/watch?v=G6MROvlLeKE) shows how to use a camera with an ESP32 as well as this [website](https://how2electronics.com/interfacing-5mp-spi-camera-with-esp32-wifi-module/)     | 
 | Unit cost                                     | $5.06      | 
 | Absolute Maximum Current for entire IC        | 1.1 A      | 
 | Supply Voltage Range                          | Min: 3.0 V <br>Nominal: 3.3 V<br>Max: 3.6 V<br>Absolute Max: 3.6 V      | 
