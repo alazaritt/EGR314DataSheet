@@ -10,7 +10,10 @@ The following sections are the selected major components necessary for the imagi
 
 **Selected Power Management Hardware: BA33DD0WHFP-TR 3.3V 2A regulator**
 
-![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true)
+<img src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true" 
+     width="300" 
+     alt="Product Image">
+
 
 [link](https://www.digikey.com/en/products/detail/rohm-semiconductor/BA33DD0WHFP-TR/3663736)
 
@@ -19,7 +22,10 @@ The following sections are the selected major components necessary for the imagi
 
 **Selected Sensor:  OV2640 2MP Camera Module**
 
-![](https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg)
+<img src="https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg" 
+     width="300" 
+     alt="Product Image">
+
 
  [link](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html)  
 
