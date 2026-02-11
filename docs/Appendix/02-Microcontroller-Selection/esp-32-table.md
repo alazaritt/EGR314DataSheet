@@ -34,3 +34,9 @@ title: Appendix - Controller Table for the ESP32
 
 
 \* The ESP32-S2 has multiple SPI interfaces, but some are for internal use
+
+
+My role on the team is responsible for the imaging and embedded processing subsystem. This includes interfacing with the camera module, configuring and controlling the camera via a serial control interface, capturing image data, and handling communication with other team subsystems via UART. I am also responsible for allocating GPIO resources and ensuring proper power delivery to the camera and microcontroller No high-power actuation is controlled directly by this subsystem, but GPIO pins are reserved for indicators and future expansion if needed.
+
+The ESP32-S3-WROOM-1-N4 module was selected as the primary microcontroller for this subsystem. This module integrates the ESP32-S3 dual-core processor, onboard flash memory, and RF components into a surface-mount module that is compatible with hand-assembled PCBs while avoiding direct soldering of fine-pitch BGA devices.
+
