@@ -49,7 +49,7 @@ ESP32-S3-WROOM-1 Pinout Diagram
 
 The figure below shows the pinout diagram for the ESP32-S3-WROOM-1 surface-mount module, sourced from the Espressif datasheet. The diagram identifies all GPIO pins, power and ground pins, and peripheral multiplexing capabilities. This diagram serves as the reference for the pin allocation table below.
 
-(Insert official ESP32-S3-WROOM-1 pinout diagram here)
+![](https://www.atomic14.com/2023/11/21/esp32-s3-pins)
 
 Pin Availability and Error Analysis
 
