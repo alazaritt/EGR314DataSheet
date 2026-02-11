@@ -621,15 +621,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -851,15 +842,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -901,12 +883,9 @@
 <h3 id="sensor">Sensor</h3>
 <p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your  <strong>SELECTED</strong> sensor is shown. Otherwise, remove this section.)</p>
 <p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor">"Appendix - Component Selection Process - Sensor"</a> selection.</p>
-<h3 id="actuator">Actuator</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your <strong>Selected</strong> the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)</p>
-<p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator">"Appendix - Component Selection Process - Actuator"</a> selection.</p>
 <hr>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
+<p><em>Table 1: Component selection</em></p>
+<p><strong>Voltage Regulator</strong></p>
 <table>
 <thead>
 <tr>
@@ -927,14 +906,43 @@
 <td>* Requires external components <br>* Layout Sensitive<br>*Poor heat dissipation at high Vin.</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/488%7E314D-04%7ET%2CTQ%7E5.jpg?hidebanner=true" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6310/488%7E314D-04%7ET%2CTQ%7E5.jpg?hidebanner=true"></a><br> LM2575T-3.3G<br>$2.51/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link to product</a></td>
-<td>* Wide Input Voltage Range<br>* Simple external components<br>* Efficient switching design</td>
-<td>* More expensive <br>* Not surface mount<br>*Lower switching frequency</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg"></a><br> TLV76133DCYR<br>$0.48/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TLV76133DCYR/18716969?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20228387720&amp;gbraid=0AAAAADrbLljWmZW5sdxv23XwNjtDfhxpY&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgnRhcYEEiF5ic2ROonZhhoX9dVTQM1dgRZhIbySp399Z6YhaxasOxwaAvqYEALw_wcB">link to product</a></td>
+<td>* High current capability<br>* Good output accuracy<br>* Wide Input Voltage Range</td>
+<td>* Moderate dropout voltage <br>*Poor heat dissipation at high Vin.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 3: LM2575T‑3.3V switching regulator
-<strong>Rationale:</strong> The LM2575T‑3.3G is a simple and reliable 3.3 V regulator that can deliver up to 1 A from a wide input range (4.75–40 V). Its switching design is more efficient than linear regulators, reducing heat when stepping down from higher voltages. It is reliable and shold be easy to implement and integrate into circuits.</p>
+<p><strong>Choice:</strong> Option 3: TLV76133DCYR 3.3V switching regulator
+<strong>Rationale:</strong> The TLV76133DCYR provides a stable and accurate 3.3 V output with  little design complexity. It can handle up to 1 A and  works over a wide input voltage range, fitting well with the available supply. It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.</p>
+<p><strong>Camera</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg" data-desc-position="bottom"><img alt="" src="https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg"></a><br> OV2640 2MP Camera Module<br>$6.99/each<br><a href="https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html">link to product</a></td>
+<td>* Good 2MP resolution<br>* On‑chip JPEG compression<br>* Easily compatible with ESP32 modules</td>
+<td>* Not ideal for high resolution images<br>* Fixed focus<br>* Requires careful wiring to reduce noise</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg"></a><br> OV5640 5 MP<br>$0.77/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link to product</a></td>
+<td>* Inexpensive<br>* Compact SMT Package<br>* Wide Input Voltage Range</td>
+<td>* Requires external components <br>* Layout Sensitive<br>*Poor heat dissipation at high Vin.</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/815/296%7E4202506%7EDCY%7E4_sml%28200x200%29.jpg"></a><br> TLV76133DCYR<br>$0.48/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TLV76133DCYR/18716969?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20228387720&amp;gbraid=0AAAAADrbLljWmZW5sdxv23XwNjtDfhxpY&amp;gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgnRhcYEEiF5ic2ROonZhhoX9dVTQM1dgRZhIbySp399Z6YhaxasOxwaAvqYEALw_wcB">link to product</a></td>
+<td>* High current capability<br>* Good output accuracy<br>* Wide Input Voltage Range</td>
+<td>* Moderate dropout voltage <br>*Poor heat dissipation at high Vin.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> Option 3: TLV76133DCYR 3.3V switching regulator
+<strong>Rationale:</strong> The TLV76133DCYR provides a stable and accurate 3.3 V output with  little design complexity. It can handle up to 1 A and  works over a wide input voltage range, fitting well with the available supply. It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.</p>
 
 
 
