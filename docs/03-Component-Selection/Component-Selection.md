@@ -4,21 +4,24 @@ title: Module's Selected Major Components
 
 ## Module's Selected Major Components
 
-The following sections are the selected major components necessary for  .....
-
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
+The following sections are the selected major components necessary for the imaging subsystem. These components include the voltage regulation hardware required to provide a stable 3.3 V power rail and the camera module used for image capture. Each component was selected based on its electrical compatibility with the ESP32-based system, its ability to meet worst-case power and performance requirements, and its use in similar embedded imaging applications. Together, these components ensure reliable operation of the system while minimizing power consumption, design complexity, and integration risk.
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} **THAT WERE SELECTED**)
+**Selected Power Management Hardware: BA33DD0WHFP-TR 3.3V 2A regulator**
 
-For more details, review the ["Appendix - Component Selection Process - Power Mangement"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management) selection.
+![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true)
+
+[link](https://www.digikey.com/en/products/detail/rohm-semiconductor/BA33DD0WHFP-TR/3663736)
+
 
 ### Sensor
 
-(**remove this note/placeholder**: if applicable, this is where your  **SELECTED** sensor is shown. Otherwise, remove this section.)
+**Selected Sensor:  OV2640 2MP Camera Module**
 
-For more details, review the ["Appendix - Component Selection Process - Sensor"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor) selection.
+![](https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg)
+
+ [link](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html)  
 
 
 
@@ -35,6 +38,7 @@ For more details, review the ["Appendix - Component Selection Process - Sensor"]
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true)<br> BA33DD0WHFP-TR<br>$2.72/each<br>[link to product](https://www.digikey.com/en/products/detail/rohm-semiconductor/BA33DD0WHFP-TR/3663736)                 | \* High current capability<br>\* Clean output <br>\* Wide Input Voltage Range                                               | \* Lower efficiency <br>\*Poor heat dissipation. |
 
 **Choice:** Option 3: BA33DD0WHFP-TR 3.3V 2A regulator
+
 **Rationale:** The BA33DD0WHFP-TR is a 3.3 V regulator capable of handling up to 2 A and works over a wide input voltage range, while providing clean, low-noise output.  It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.
 
 **Camera**
@@ -46,6 +50,7 @@ For more details, review the ["Appendix - Component Selection Process - Sensor"]
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/220/197/CAMERA-OV7670_sml%28200x200%29.jpg)<br> CAMERA-OV7670<br>$5.92/each<br>[link to product](https://www.digikey.com/en/products/detail/olimex-ltd/CAMERA-OV7670/21662189?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410779255&gbraid=0AAAAADrbLlhlt3SD16S1QgVRKgIqMNvJu&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglJn91DAUynbqBVx4kB63ikL1yjSF6BrEwIhMDMANKIyLXUkxM-Wd4aAs5aEALw_wcB)                 | \* Inexpensive <br>\* Less processing needed                                               | \* Low resolution <br>\*Complex wiring required<br>\*Low frame rates |
 
 **Choice:** Option 1: OV2640 camera
+
 **Rationale:** The ESP32-CAM OV2640 provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.
 
 
