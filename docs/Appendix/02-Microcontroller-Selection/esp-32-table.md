@@ -45,16 +45,16 @@ At this stage of the design process, it is critical to verify that the selected 
 
 According to the OV2640 datasheet, the camera uses two distinct communication methods. Camera configuration and control are handled through SCCB, an I²C-compatible serial interface. This requires multiple register writes during initialization to configure resolution, color format, clocking, and operating mode. Once configured, image data is transferred using a parallel DVP interface, which includes eight data lines (D0–D7) and synchronization signals (PCLK, VSYNC, and HREF). While this interface is more complex than a single read/write transaction, existing ESP32 camera libraries manage the initialization and data capture process, significantly reducing implementation risk.
 
-ESP32-S3-WROOM-1 Pinout Diagram
+## ESP32-S3-WROOM-1 Pinout Diagram
 
 The figure below shows the pinout diagram for the ESP32-S3-WROOM-1 surface-mount module, sourced from the Espressif datasheet. The diagram identifies all GPIO pins, power and ground pins, and peripheral multiplexing capabilities. This diagram serves as the reference for the pin allocation table below.
 
-![](https://www.atomic14.com/2023/11/21/esp32-s3-pins)
+![](https://raw.githubusercontent.com/atomic14/esp32-s3-pinouts/main/esp32.webp)
 
-Pin Availability and Error Analysis
+## Pin Availability and Error Analysis
 
 The ESP32-S3-WROOM-1 provides sufficient GPIO and peripheral flexibility to support the OV2640 camera interface, I²C control, and additional GPIO signals without conflict. All required power, ground, and communication pins are available, and no pin multiplexing conflicts were identified during allocation. The ESP32 GPIO matrix allows pins to be reassigned if future design changes require it, providing additional design margin. Overall, the pin allocation confirms that the selected microcontroller comfortably meets the project’s hardware requirements.
 
-Final Microcontroller Choice and Rationale
+## Final Microcontroller Selecton
 
 The ESP32-S3-WROOM-1-N4 was selected as the final microcontroller due to its strong compatibility with camera peripherals, high GPIO availability, and extensive software ecosystem. Compared to other ESP32 variants, the ESP32-S3 offers improved I/O flexibility, native USB support, and official Espressif camera drivers, reducing integration and debugging risk. Unlike ESP32-CAM modules, this device avoids severe pin limitations and allows clear, conflict-free pin allocation. Additionally, using a surface-mount module avoids direct soldering of fine-pitch BGA devices while remaining compliant with Peralta Labs manufacturing constraints. Based on datasheet specifications, available libraries, and subsystem requirements, the ESP32-S3-WROOM-1 is the optimal and most robust choice for this design.
