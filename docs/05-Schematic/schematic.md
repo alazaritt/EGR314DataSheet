@@ -8,8 +8,8 @@ This schematic is designed to support the camera imaging subsystem, designed to 
 
 
 
-![schematic](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/individual.subsystem.314.svg){style width:"350" height:"300;"}
-**Figure ##:** Showing a example schematic.
+![image1](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/individual.subsystem.314.svg)
+**Figure 1:** schematic of camera imaging subsystem.
 
 
 ## Resouces
