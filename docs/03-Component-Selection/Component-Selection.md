@@ -8,14 +8,14 @@ The following sections are the selected major components necessary for the imagi
 
 ### Power Management
 
-**Selected Power Management Hardware: BA33DD0WHFP-TR 3.3V 2A regulator**
+**Selected Power Management Hardware: AP63203WU-7 IC 3.3V 2A regulator**
 
-<img src="https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true" 
+<img src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg" 
      width="300" 
      alt="Product Image">
 
 
-[link](https://www.digikey.com/en/products/detail/rohm-semiconductor/BA33DD0WHFP-TR/3663736)
+[link](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)
 
 
 ### Sensor
@@ -43,9 +43,9 @@ The following sections are the selected major components necessary for the imagi
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/010/103/MFG_AP6320x_sml.jpg)<br> AP63203WU-7 IC 3.3V 2A TSOT23-6<br>$0.77/each<br>[link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)                 | \* Inexpensive<br>\* Compact SMT Package<br>\* Wide Input Voltage Range                                               | \* Requires external components <br>\* Layout Sensitive<br>\*Poor heat dissipation at high Vin. |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/6311/846%7EHRP5%7E%7E5.jpg?hidebanner=true)<br> BA33DD0WHFP-TR<br>$2.72/each<br>[link to product](https://www.digikey.com/en/products/detail/rohm-semiconductor/BA33DD0WHFP-TR/3663736)                 | \* High current capability<br>\* Clean output <br>\* Wide Input Voltage Range                                               | \* Lower efficiency <br>\*Poor heat dissipation. |
 
-**Choice:** Option 3: BA33DD0WHFP-TR 3.3V 2A regulator
+**Choice:** Option 2: AP63203WU-7 IC 3.3V 2A regulator
 
-**Rationale:** The BA33DD0WHFP-TR is a 3.3 V regulator capable of handling up to 2 A and works over a wide input voltage range, while providing clean, low-noise output.  It requires only small ceramic capacitors and includes built-in protection features, which helps keep the PCB simple, compact, and reliable.
+**Rationale:** The AP63203WU-7 is a 3.3 V regulator capable of handling up to 2 A and works over a wide input voltage range, while providing clean, low-noise output. Though it requires some external circutry, it remains compact, and it also includes built-in protection features to ensure reliablity.
 
 **Camera**
 
