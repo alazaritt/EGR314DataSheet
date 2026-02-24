@@ -16,7 +16,7 @@ The system communicates actively with two other boards to maintain synchronizati
 
 ## Block Diagram 
 
-![Example of Indivial Block diagram ](https://github.com/alazaritt/EGR314DataSheetTemplate/releases/download/blockdiagram/314.individual.bock.diagram.drawio.png)
+![Example of Indivial Block diagram ](https://raw.githubusercontent.com/alazaritt/EGR314DataSheet/05a2e06ff7b738945f76b8e05a344b244da6ed41/docs/02-Block-Diagram/individual2.0.drawio.svg)
 
 
-A direct link to the source file of the above block diagram can be found [here](https://github.com/alazaritt/EGR314DataSheetTemplate/releases/download/blockdiagram/314.individual.bock.diagram.drawio)
+A direct link to the source file of the above block diagram can be found [here](https://github.com/alazaritt/EGR314DataSheet/releases/download/blockdiagram/individual2.0.drawio)
