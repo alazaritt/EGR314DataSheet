@@ -8,7 +8,7 @@ tags:
 ## Overview
 The Bill of Materials (BOM) outlines all necessary components for the design and assembly of the project. It includes each part’s specifications, quantity, and cost, providing a clear and comprehensive overview of the materials needed for construction. Serving as a key reference document, the BOM ensures component compatibility and reliable production of the final design.
 
-## Bill of Materials (Example as Table)
+## Bill of Materials
 
 *Table 1: All necessary parts for the sound board system*
 
