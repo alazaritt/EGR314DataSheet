@@ -22,12 +22,12 @@ The following sections are the selected major components necessary for the imagi
 
 **Selected Sensor:  OV2640 2MP Camera Module**
 
-<img src="https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg" 
+<img src="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886" 
      width="300" 
      alt="Product Image">
 
 
- [link](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html)  
+ [link](https://spotpear.com/index/product/detail/id/260.html)  
 
 
 
@@ -51,7 +51,7 @@ The following sections are the selected major components necessary for the imagi
 
 | **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](https://www.arducam.com/media/catalog/product/cache/45336f8944e7eb3ec4b20e42d64c20ed/a/r/arducam-_ov2640_-camera_module_m0031-1.jpg)<br> OV2640 2MP Camera Module<br>$6.99/each<br>[link to product](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html)                 | \* Good 2MP resolution<br>\* On‑chip JPEG compression<br>\* Easily compatible with ESP32 modules                                               | \* Not ideal for high resolution images<br>\* Fixed focus<br>\* Requires careful wiring to reduce noise |
+| ![](https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886)<br> OV2640 2MP Camera Module<br>$12.89/each<br>[link to product](https://spotpear.com/index/product/detail/id/260.html)                 | \* Good 2MP resolution<br>\* On‑chip JPEG compression<br>\* Easily compatible with ESP32 modules                                               | \* Not ideal for high resolution images<br>\* Fixed focus<br>\* Requires careful wiring to reduce noise |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/138/725/MFG_B0400_sml.jpg)<br> OV5640 5 MP<br>$40.92/each<br>[link to product](https://www.digikey.com/en/products/detail/arducam/B0400/19116509?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglpbaWs6xKmgRJQkk2K2B5ids20uMjPOvCeqMobiPXRw5iLrOl5xi8aAojIEALw_wcB)                 | \* Easy to implement with ESP32<br>\* Moderate resolution<br>\* Supports autofocus                                               | \* Idle power consumption <br>\* May require complex software integration |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/220/197/CAMERA-OV7670_sml%28200x200%29.jpg)<br> CAMERA-OV7670<br>$5.92/each<br>[link to product](https://www.digikey.com/en/products/detail/olimex-ltd/CAMERA-OV7670/21662189?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410779255&gbraid=0AAAAADrbLlhlt3SD16S1QgVRKgIqMNvJu&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglJn91DAUynbqBVx4kB63ikL1yjSF6BrEwIhMDMANKIyLXUkxM-Wd4aAs5aEALw_wcB)                 | \* Inexpensive <br>\* Less processing needed                                               | \* Low resolution <br>\*Complex wiring required<br>\*Low frame rates |
 
