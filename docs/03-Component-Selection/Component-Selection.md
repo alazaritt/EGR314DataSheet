@@ -57,6 +57,6 @@ The following sections are the selected major components necessary for the imagi
 
 **Choice:** Option 1: OV2640 camera
 
-**Rationale:** The ESP32-CAM OV2640 provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.
+**Rationale:** The OV2640 camera provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without too much extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.
 
 
