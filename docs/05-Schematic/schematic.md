@@ -14,4 +14,4 @@ This schematic is designed to support the camera imaging subsystem, designed to 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/individual.subsystem.314.pdf), and the Zip folder of the project [*here*](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/individual.subsystem.314.zip).
+The schematic as a PDF download is available [*here*](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/individual.subsystem.314.pdf), and the Zip folder of the project [*here*](https://github.com/alazaritt/EGR314DataSheet/releases/download/schematic/Arianna_Lazaritt_305_individual_subsytem_UPDATED.zip).
