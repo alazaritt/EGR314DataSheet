@@ -43,6 +43,4 @@ To review the details listed of the mcomponents and hardware used, see the [BOM]
 
 For a more in depth overview of the subsystem and to access associated files with it, review the [Schematic](https://alazaritt.github.io/EGR314DataSheet/05-Schematic/schematic/) section of the datasheet.
 
-The fully developed PCB of this subsystem can be found in the [PCB](https://alazaritt.github.io/EGR314DataSheet/06-PCB/pcb/) section of the datasheet
-
 To see how power was taken into consideration and a calulated current draw of all components within the system, see the [Power Budget](https://alazaritt.github.io/EGR314DataSheet/Appendix/03-Power-Budget/Power-Budget/) section of the datasheet.
