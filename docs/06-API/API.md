@@ -6,7 +6,8 @@ tags:
 ---
 
 ## Overview
-My subsystem is the camera subsystem. Its role is to capture image frames using an onboard camera and communicate both status information and image data over the daisy-chained UART network. The subsystem periodically reports the camera’s operating state (idle or capturing) and transmits captured frames in packetized chunks to other subsystems. An onboard LED is used for debugging the system.
+My subsystem is the camera subsystem. Its primary role is to capture image frames using an onboard camera and communicate both status information and image data over the daisy-chained UART network. The subsystem periodically reports the camera’s operating state (idle or capturing) and transmits captured frames in packetized chunks to other subsystems. An onboard LED is used for debugging the system and is not part of the communication interface.
+
 The team communication protocol defines standard message types for subsystem interaction over UART. For my subsystem, the primary communication involves reporting camera status and sending image frame data in packets. All messages sent follow the shared UART protocol with framing and addressing constraints.
 
 ## Messages Received/Processed
@@ -53,3 +54,4 @@ The camera subsystem periodically sends a status report and splits each captured
 * camera_state: 0 = Off, 1 = Idle, 2 = Capturing
 * frame_width and frame_height: Resolution of captured frames
 * error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error
+
