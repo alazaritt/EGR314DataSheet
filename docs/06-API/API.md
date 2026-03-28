@@ -18,7 +18,7 @@ The team communication protocol defines standard message types for subsystem int
 This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. The tables below outline how the messages are constructed and sent.
 
 
- ### *Message Type 3 — Camera Frame Data Packets*
+### *Message Type 3 — Camera Frame Data Packets*
 
 | Field          | Byte 1–2 | Byte 3–4 | Byte 5–6 | Byte 7–8 | Byte 9–58 |
 |----------------|----------|----------|----------|----------|-----------|
