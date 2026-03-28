@@ -797,20 +797,14 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#receiving-message-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Receiving Message Structure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Receiving Message Structure">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#outgoing-message-structure" class="md-nav__link">
@@ -966,20 +960,14 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#receiving-message-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Receiving Message Structure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Receiving Message Structure">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#outgoing-message-structure" class="md-nav__link">
@@ -1159,13 +1147,14 @@
 <li>frame_width and frame_height: Resolution of captured frames</li>
 <li>error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error</li>
 </ul>
-<h2 id="receiving-message-structure">Receiving Message Structure</h2>
-<p>Upon receiving a message:
-* Check message validity
-* Discard looped messages that originated from this subsystem
-* Process messages addressed to this subsystem
-* Forward all other messages unchanged
-* Provide a unique acknowledgement when a correctly formatted message received</p>
+<h3 id="receiving-message-structure">Receiving Message Structure</h3>
+<ul>
+<li>Check message validity</li>
+<li>Discard looped messages that originated from this subsystem</li>
+<li>Process messages addressed to this subsystem</li>
+<li>Forward all other messages unchanged</li>
+<li>Provide a unique acknowledgement when a correctly formatted message received</li>
+</ul>
 <h3 id="outgoing-message-structure">Outgoing Message Structure</h3>
 <ul>
 <li>All non-local messages are retransmitted</li>
