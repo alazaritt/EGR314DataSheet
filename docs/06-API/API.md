@@ -14,9 +14,12 @@ The team communication protocol defines standard message types for subsystem int
 * Messages received that are intended for this subsystem will be acknowledged by flashing an onboard LED (not connected to the UART message system)
 * Any messages not addressed to this subsystem are forwarded to other subsystems along the UART daisy chain system.
 * Any messages sent from this subsystem that have circled back to it will be discarded.
+* Messages that are not properly formatted and are larger than the payload size will be ignored
+* 
+
 
 ## Messages Sent
-This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. The tables below outline how the messages are constructed and sent.
+This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. All messages are formatted according to the shared team protocol and include a unique message type identifier, relevant data fields, and optional error codes. The tables below outline how the messages are constructed and sent.
 
 
 ### *Message Type 3 — Camera Frame Data Packets*
@@ -57,3 +60,17 @@ The camera subsystem periodically sends a status report and splits each captured
 * frame_width and frame_height: Resolution of captured frames
 * error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error
 
+
+
+## Receiving Message Structure
+Upon receiving a message:
+* Check message validity
+* Discard looped messages that originated from this subsystem
+* Process messages addressed to this subsystem
+* Forward all other messages unchanged
+* Provide a unique acknowledgement when a correctly formatted message received
+
+### Outgoing Message Structure
+* All non-local messages are retransmitted
+* Prioritize forwaring received messages over sending new messages
+* The subsystem periodically transmits Message Types 3 and 4
