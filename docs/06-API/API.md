@@ -62,8 +62,8 @@ The camera subsystem periodically sends a status report and splits each captured
 
 
 
-## Receiving Message Structure
-Upon receiving a message:
+### Receiving Message Structure
+
 * Check message validity
 * Discard looped messages that originated from this subsystem
 * Process messages addressed to this subsystem
