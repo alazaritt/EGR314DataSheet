@@ -32,6 +32,7 @@ This subsystem sends two different message types, Message Type 3 – Camera Fram
 Each captured frame is divided into multiple packets, with each packet containing up to 50 bytes of image data. The packet_index field indicates the order of the packet within the frame, and total_packets tells the receiver how many packets to expect for the full frame. This allows the receiving subsystem to reconstruct the complete image frame from multiple chunks. Packet size and sequence numbering ensure consistent and reliable transmission over the UART daisy chain.
 
 *Value Breakdown*
+
 * message_type: Indicates this is an image data packet
 * frame_id: Unique ID for each captured frame
 * packet_index: Sequence number of this chunk
@@ -51,6 +52,7 @@ Each captured frame is divided into multiple packets, with each packet containin
 The camera subsystem periodically sends a status report and splits each captured frame into the following values for transmission:
 
 *Value Breakdown*
+
 * camera_state: 0 = Off, 1 = Idle, 2 = Capturing
 * frame_width and frame_height: Resolution of captured frames
 * error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error
