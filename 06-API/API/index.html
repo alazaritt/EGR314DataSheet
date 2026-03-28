@@ -973,8 +973,8 @@
   <h1>API</h1>
 
 <h2 id="overview">Overview</h2>
-<p>My subsystem is the camera subsystem. Its role is to capture image frames using an onboard camera and communicate both status information and image data over the daisy-chained UART network. The subsystem periodically reports the camera’s operating state (idle or capturing) and transmits captured frames in packetized chunks to other subsystems. An onboard LED is used for debugging the system.
-The team communication protocol defines standard message types for subsystem interaction over UART. For my subsystem, the primary communication involves reporting camera status and sending image frame data in packets. All messages sent follow the shared UART protocol with framing and addressing constraints.</p>
+<p>My subsystem is the camera subsystem. Its primary role is to capture image frames using an onboard camera and communicate both status information and image data over the daisy-chained UART network. The subsystem periodically reports the camera’s operating state (idle or capturing) and transmits captured frames in packetized chunks to other subsystems. An onboard LED is used for debugging the system and is not part of the communication interface.</p>
+<p>The team communication protocol defines standard message types for subsystem interaction over UART. For my subsystem, the primary communication involves reporting camera status and sending image frame data in packets. All messages sent follow the shared UART protocol with framing and addressing constraints.</p>
 <h2 id="messages-receivedprocessed">Messages Received/Processed</h2>
 <ul>
 <li>Messages received that are intended for this subsystem will be acknowledged by flashing an onboard LED (not connected to the UART message system)</li>
