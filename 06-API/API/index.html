@@ -1039,12 +1039,14 @@
 </tbody>
 </table>
 <p>Each captured frame is divided into multiple packets, with each packet containing up to 50 bytes of image data. The packet_index field indicates the order of the packet within the frame, and total_packets tells the receiver how many packets to expect for the full frame. This allows the receiving subsystem to reconstruct the complete image frame from multiple chunks. Packet size and sequence numbering ensure consistent and reliable transmission over the UART daisy chain.</p>
-<p><em>Value Breakdown</em>
-* message_type: Indicates this is an image data packet
-* frame_id: Unique ID for each captured frame
-* packet_index: Sequence number of this chunk
-* total_packets: Total number of packets for the full frame
-* image_data_chunk: Raw image data</p>
+<p><em>Value Breakdown</em></p>
+<ul>
+<li>message_type: Indicates this is an image data packet</li>
+<li>frame_id: Unique ID for each captured frame</li>
+<li>packet_index: Sequence number of this chunk</li>
+<li>total_packets: Total number of packets for the full frame</li>
+<li>image_data_chunk: Raw image data</li>
+</ul>
 <h3 id="message-type-4-camera-status-report"><em>Message Type 4 — Camera Status Report</em></h3>
 <table>
 <thead>
@@ -1101,10 +1103,12 @@
 </tbody>
 </table>
 <p>The camera subsystem periodically sends a status report and splits each captured frame into the following values for transmission:</p>
-<p><em>Value Breakdown</em>
-* camera_state: 0 = Off, 1 = Idle, 2 = Capturing
-* frame_width and frame_height: Resolution of captured frames
-* error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error</p>
+<p><em>Value Breakdown</em></p>
+<ul>
+<li>camera_state: 0 = Off, 1 = Idle, 2 = Capturing</li>
+<li>frame_width and frame_height: Resolution of captured frames</li>
+<li>error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error</li>
+</ul>
 
 
 
