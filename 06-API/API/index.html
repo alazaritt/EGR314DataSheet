@@ -802,6 +802,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#receiving-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Message Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Receiving Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outgoing Message Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -947,6 +971,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#receiving-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Message Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Receiving Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-message-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outgoing Message Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -980,9 +1028,11 @@
 <li>Messages received that are intended for this subsystem will be acknowledged by flashing an onboard LED (not connected to the UART message system)</li>
 <li>Any messages not addressed to this subsystem are forwarded to other subsystems along the UART daisy chain system.</li>
 <li>Any messages sent from this subsystem that have circled back to it will be discarded.</li>
+<li>Messages that are not properly formatted and are larger than the payload size will be ignored</li>
+<li></li>
 </ul>
 <h2 id="messages-sent">Messages Sent</h2>
-<p>This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. The tables below outline how the messages are constructed and sent.</p>
+<p>This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. All messages are formatted according to the shared team protocol and include a unique message type identifier, relevant data fields, and optional error codes. The tables below outline how the messages are constructed and sent.</p>
 <h3 id="message-type-3-camera-frame-data-packets"><em>Message Type 3 — Camera Frame Data Packets</em></h3>
 <table>
 <thead>
@@ -1108,6 +1158,19 @@
 <li>camera_state: 0 = Off, 1 = Idle, 2 = Capturing</li>
 <li>frame_width and frame_height: Resolution of captured frames</li>
 <li>error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error</li>
+</ul>
+<h2 id="receiving-message-structure">Receiving Message Structure</h2>
+<p>Upon receiving a message:
+* Check message validity
+* Discard looped messages that originated from this subsystem
+* Process messages addressed to this subsystem
+* Forward all other messages unchanged
+* Provide a unique acknowledgement when a correctly formatted message received</p>
+<h3 id="outgoing-message-structure">Outgoing Message Structure</h3>
+<ul>
+<li>All non-local messages are retransmitted</li>
+<li>Prioritize forwaring received messages over sending new messages</li>
+<li>The subsystem periodically transmits Message Types 3 and 4</li>
 </ul>
 
 
