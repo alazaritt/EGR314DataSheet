@@ -75,7 +75,7 @@ These values are updated continuously in software and transmitted when requested
 * Only valid request messages generate a response
 
 
-# ## Outgoing Message Structure
+## Outgoing Message Structure
 
 * The subsystem primarily responds to requests rather than continuously streaming data
 * Encoder and camera status messages are only transmitted when requested
