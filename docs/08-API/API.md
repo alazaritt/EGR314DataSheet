@@ -5,72 +5,79 @@ tags:
 - tag2
 ---
 
-## Overview
-My subsystem is the camera subsystem. Its primary role is to capture image frames using an onboard camera and communicate both status information and image data over the daisy-chained UART network. The subsystem periodically reports the camera’s operating state (idle or capturing) and transmits captured frames in packetized chunks to other subsystems. An onboard LED is used for debugging the system and is not part of the communication interface.
 
-The team communication protocol defines standard message types for subsystem interaction over UART. For my subsystem, the primary communication involves reporting camera status and sending image frame data in packets. All messages sent follow the shared UART protocol with framing and addressing constraints.
+## Overview
+
+My subsystem is a combined camera status and rotary encoder reporting module. Its primary role is to interface with a camera over I2C to determine whether it is connected and functioning, and to communicate this status over a daisy-chained UART network. In addition to the camera subsystem, it also reads a rotary encoder using GPIO inputs to track rotation direction and button presses. Both the camera status and encoder data are reported to other subsystems when requested through the shared communication protocol.
+
+The subsystem focuses on reporting camera state information such as whether the camera is detected, whether it is considered “capturing,” and any associated error conditions. An onboard LED is used as a simple debug indicator for transmission activity and is not part of the communication protocol itself.
+
+All communication follows the shared UART packet protocol, which defines message framing, addressing, and routing rules for all subsystems in the network.
 
 ## Messages Received/Processed
-* Messages received that are intended for this subsystem will be acknowledged by flashing an onboard LED (not connected to the UART message system)
-* Any messages not addressed to this subsystem are forwarded to other subsystems along the UART daisy chain system.
-* Any messages sent from this subsystem that have circled back to it will be discarded.
-* Messages that are not properly formatted and are larger than the payload size will be ignored
-* 
 
+* Messages received that are addressed to this subsystem are parsed and processed through a validation and routing system.
+* If a message is a valid request from the HMI, the subsystem responds with either camera status data or encoder data depending on the request type.
+* Messages not intended for this subsystem are automatically forwarded along the UART daisy chain without modification.
+* Messages that originate from this subsystem and loop back to it are discarded to prevent redundant processing.
+* Any improperly formatted or invalid packets are rejected during validation and not further processed.
+* An acknowledgement is only generated for valid, correctly formatted messages.
 
 ## Messages Sent
-This subsystem sends two different message types, Message Type 3 – Camera Frame Data Packets, and Message Type 4 — Camera Status Report. All messages are formatted according to the shared team protocol and include a unique message type identifier, relevant data fields, and optional error codes. The tables below outline how the messages are constructed and sent.
 
-
-### *Message Type 3 — Camera Frame Data Packets*
-
-| Field          | Byte 1–2 | Byte 3–4 | Byte 5–6 | Byte 7–8 | Byte 9–58 |
-|----------------|----------|----------|----------|----------|-----------|
-| Variable Name  | message_type | frame_id | packet_index | total_packets | image_data_chunk |
-| Variable Type  | uint16_t | uint16_t | uint16_t | uint16_t | uint8_t[50] |
-| Min Value      | 3        | 0        | 0        | 1        | 0         |
-| Max Value      | 3        | 65535    | 65535    | 65535    | 255       |
-| Example        | 3        | 25       | 1        | 10       | 45        |
-
-Each captured frame is divided into multiple packets, with each packet containing up to 50 bytes of image data. The packet_index field indicates the order of the packet within the frame, and total_packets tells the receiver how many packets to expect for the full frame. This allows the receiving subsystem to reconstruct the complete image frame from multiple chunks. Packet size and sequence numbering ensure consistent and reliable transmission over the UART daisy chain.
-
-*Value Breakdown*
-
-* message_type: Indicates this is an image data packet
-* frame_id: Unique ID for each captured frame
-* packet_index: Sequence number of this chunk
-* total_packets: Total number of packets for the full frame
-* image_data_chunk: Raw image data
+This subsystem sends two main message types:
+Message Type 4 – Camera Status Report and Message Type 5 – Encoder Status Report.
+Both are structured according to the shared UART protocol and are transmitted only in response to valid requests from the HMI.
 
 ### *Message Type 4 — Camera Status Report*
 
-| Field          | Byte 1–2 | Byte 3 | Byte 4–5 | Byte 6–7 | Byte 8 |
-|----------------|----------|--------|----------|----------|--------|
-| Variable Name  | message_type | camera_state | frame_width | frame_height | error_code |
-| Variable Type  | uint16_t | uint8_t | uint16_t | uint16_t | uint8_t |
-| Min Value      | 4        | 0      | 0        | 0        | 0      |
-| Max Value      | 4        | 2      | 1920     | 1080     | 2      |
-| Example        | 4        | 2      | 640      | 480      | 0      |
+| Field         | Byte 1   | Byte 2       | Byte 3–4    | Byte 5–6     | Byte 7     |
+| ------------- | -------- | ------------ | ----------- | ------------ | ---------- |
+| Variable Name | reserved | camera_state | frame_width | frame_height | error_code |
+| Variable Type | uint8_t  | uint8_t      | uint16_t    | uint16_t     | uint8_t    |
+| Min Value     | 0        | 0            | 0           | 0            | 0          |
+| Max Value     | 0        | 2            | 1920        | 1080         | 255        |
+| Example       | 0        | 2            | 1280        | 1024         | 0          |
 
-The camera subsystem periodically sends a status report and splits each captured frame into the following values for transmission:
+The camera subsystem does not transmit image frames. Instead, it periodically evaluates whether a camera is present using an I2C scan and assigns a simplified state:
 
-*Value Breakdown*
+* Camera present = state set to capturing
+* Camera missing for multiple checks = state set to off with an error code
 
-* camera_state: 0 = Off, 1 = Idle, 2 = Capturing
-* frame_width and frame_height: Resolution of captured frames
-* error_code: 0 = No error, 1 = Camera not detected, 2 = Unknown error
-
+This status data is only transmitted when requested by the HMI.
 
 
-### Receiving Message Structure
+### *Message Type 5 — Encoder Status Report*
 
-* Check message validity
-* Discard looped messages that originated from this subsystem
-* Process messages addressed to this subsystem
-* Forward all other messages unchanged
-* Provide a unique acknowledgement when a correctly formatted message received
+| Field         | Byte 1–2      | Byte 3–4       | Byte 5–6    |
+| ------------- | ------------- | -------------- | ----------- |
+| Variable Name | forward_count | backward_count | reset_count |
+| Variable Type | uint16_t      | uint16_t       | uint16_t    |
+| Min Value     | 0             | 0              | 0           |
+| Max Value     | 65535         | 65535          | 65535       |
+| Example       | 12            | 8              | 1           |
 
-### Outgoing Message Structure
-* All non-local messages are retransmitted
-* Prioritize forwaring received messages over sending new messages
-* The subsystem periodically transmits Message Types 3 and 4
+The rotary encoder subsystem tracks:
+
+* Forward rotation steps
+* Backward rotation steps
+* Button presses used to reset counters
+
+These values are updated continuously in software and transmitted when requested by the HMI. This allows external systems to monitor user input in real time.
+
+
+## Receiving Message Structure
+
+* Incoming messages are validated for correct format, length, and addressing before processing
+* Requests from the HMI trigger either a camera status response or encoder status response
+* Messages not addressed to this subsystem are forwarded unchanged
+* Loopback messages (originating from this subsystem) are discarded
+* Only valid request messages generate a response
+
+
+# ## Outgoing Message Structure
+
+* The subsystem primarily responds to requests rather than continuously streaming data
+* Encoder and camera status messages are only transmitted when requested
+* Forwarding of unrelated messages is prioritized over generating new outgoing data
+* All outgoing messages follow the shared UART packet structure with proper framing and addressing
