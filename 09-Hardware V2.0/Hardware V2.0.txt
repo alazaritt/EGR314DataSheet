@@ -1,0 +1,1 @@
+If you were to create a "Version 2.0" of your hardware design, discuss what could be improved in the hardware design and why it should be improved. Use the schematic section above to support the discussion. (½  page min)
