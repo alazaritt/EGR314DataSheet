@@ -22,7 +22,7 @@ The following sections are the selected major components necessary for the imagi
 
 **Selected Sensor:  OV2640 2MP Camera Module**
 
-<img src="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886" 
+<img src="https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg" 
      width="300" 
      alt="Product Image">
 
@@ -33,7 +33,7 @@ The following sections are the selected major components necessary for the imagi
 
 -----------
 
-*Table 1: Component selection*
+*Table 1: Component Selection - Voltage Regulator*
 
 **Voltage Regulator**
 
@@ -47,11 +47,12 @@ The following sections are the selected major components necessary for the imagi
 
 **Rationale:** The AP63203WU-7 is a 3.3 V regulator capable of handling up to 2 A and works over a wide input voltage range, while providing clean, low-noise output. Though it requires some external circutry, it remains compact, and it also includes built-in protection features to ensure reliablity.
 
-**Camera**
+
+*Table 2: Component Selection - Camera*
 
 | **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886)<br> OV2640 2MP Camera Module<br>$12.89/each<br>[link to product](https://spotpear.com/index/product/detail/id/260.html)                 | \* Good 2MP resolution<br>\* On‑chip JPEG compression<br>\* Easily compatible with ESP32 modules                                               | \* Not ideal for high resolution images<br>\* Fixed focus<br>\* Requires careful wiring to reduce noise |
+| ![](https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg) <br> OV2640 2MP Camera Module<br>$12.89/each<br>[link to product](https://spotpear.com/index/product/detail/id/260.html)                 | \* Good 2MP resolution<br>\* On‑chip JPEG compression<br>\* Easily compatible with ESP32 modules                                               | \* Not ideal for high resolution images<br>\* Fixed focus<br>\* Requires careful wiring to reduce noise |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/002/138/725/MFG_B0400_sml.jpg)<br> OV5640 5 MP<br>$40.92/each<br>[link to product](https://www.digikey.com/en/products/detail/arducam/B0400/19116509?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gbraid=0AAAAADrbLlj1fnVHDFXcm9ZQE3CLO1GPB&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglpbaWs6xKmgRJQkk2K2B5ids20uMjPOvCeqMobiPXRw5iLrOl5xi8aAojIEALw_wcB)                 | \* Easy to implement with ESP32<br>\* Moderate resolution<br>\* Supports autofocus                                               | \* Idle power consumption <br>\* May require complex software integration |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/220/197/CAMERA-OV7670_sml%28200x200%29.jpg)<br> CAMERA-OV7670<br>$5.92/each<br>[link to product](https://www.digikey.com/en/products/detail/olimex-ltd/CAMERA-OV7670/21662189?gclsrc=aw.ds&gad_source=1&gad_campaignid=23410779255&gbraid=0AAAAADrbLlhlt3SD16S1QgVRKgIqMNvJu&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOglJn91DAUynbqBVx4kB63ikL1yjSF6BrEwIhMDMANKIyLXUkxM-Wd4aAs5aEALw_wcB)                 | \* Inexpensive <br>\* Less processing needed                                               | \* Low resolution <br>\*Complex wiring required<br>\*Low frame rates |
 
@@ -60,4 +61,46 @@ The following sections are the selected major components necessary for the imagi
 **Rationale:** The OV2640 camera provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without too much extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.
 
 
- was selected because it meets the subsystem’s imaging requirements while integrating easily with the*ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.
+It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.
+
+
+
+*Table 3: Final Components Selected (summary)*
+
+| **Part Name/Description** | **Manufacturer/Part Number** |
+|:--------------------|:----|:---------------|
+Voltage regulator |Diodes Incorporated/AP63203WU-7  | 
+Camera | OmniVision/OV2640 |
+
+
+*Table 4: ESP32 S3 Pinout*
+
+| **Component** | **Pin** | 
+|:--------------------|:----|
+Enable button | EN |
+Camera | IO4 | 
+Camera | IO5 |
+Camera | IO6 | 
+Camera | IO7 | 
+Camera | IO15 | 
+Camera | IO16 | 
+Camera | IO17 | 
+Camera | IO18 | 
+Camera | IO8 |
+USB D- | IO19 | 
+USB D+ | IO20 | 
+Camera | IO3 | 
+Camera | IO46 | 
+Camera | IO9 | 
+Camera | IO10 |
+Camera | IO11 | 
+Camera | IO12 |
+encoder SW | IO13 | 
+DT | IO14 | 
+CLK | IO21 | 
+extra | IO47 | 
+Boot button | IO0 | 
+Reset button | IO35 | 
+LED | IO36 | 
+TX | IO43 | 
+RX | IO44 | 
