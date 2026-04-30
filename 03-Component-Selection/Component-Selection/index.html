@@ -1010,10 +1010,10 @@
 <p><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?">link</a></p>
 <h3 id="sensor">Sensor</h3>
 <p><strong>Selected Sensor:  OV2640 2MP Camera Module</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886" data-desc-position="bottom"><img src="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886" width="300" alt="Product Image"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg" data-desc-position="bottom"><img src="https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg" width="300" alt="Product Image"></a></p>
 <p><a href="https://spotpear.com/index/product/detail/id/260.html">link</a>  </p>
 <hr>
-<p><em>Table 1: Component selection</em></p>
+<p><em>Table 1: Component Selection - Voltage Regulator</em></p>
 <p><strong>Voltage Regulator</strong></p>
 <table>
 <thead>
@@ -1043,7 +1043,7 @@
 </table>
 <p><strong>Choice:</strong> Option 2: AP63203WU-7 IC 3.3V 2A regulator</p>
 <p><strong>Rationale:</strong> The AP63203WU-7 is a 3.3 V regulator capable of handling up to 2 A and works over a wide input voltage range, while providing clean, low-noise output. Though it requires some external circutry, it remains compact, and it also includes built-in protection features to ensure reliablity.</p>
-<p><strong>Camera</strong></p>
+<p><em>Table 2: Component Selection - Camera</em></p>
 <table>
 <thead>
 <tr>
@@ -1054,7 +1054,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886" data-desc-position="bottom"><img alt="" src="https://www.robotshop.com/cdn/shop/files/ov2640-camera-board-2_1200x1200.webp?v=1720530886"></a><br> OV2640 2MP Camera Module<br>$12.89/each<br><a href="https://spotpear.com/index/product/detail/id/260.html">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg" data-desc-position="bottom"><img alt="" src="https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/o/v/ov2640-camera-board_l_1_5.jpg"></a> <br> OV2640 2MP Camera Module<br>$12.89/each<br><a href="https://spotpear.com/index/product/detail/id/260.html">link to product</a></td>
 <td>* Good 2MP resolution<br>* On‑chip JPEG compression<br>* Easily compatible with ESP32 modules</td>
 <td>* Not ideal for high resolution images<br>* Fixed focus<br>* Requires careful wiring to reduce noise</td>
 </tr>
@@ -1072,7 +1072,131 @@
 </table>
 <p><strong>Choice:</strong> Option 1: OV2640 camera</p>
 <p><strong>Rationale:</strong> The OV2640 camera provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without too much extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.</p>
-<p>was selected because it meets the subsystem’s imaging requirements while integrating easily with the*ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.</p>
+<p>It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.</p>
+<p><em>Table 3: Final Components Selected (summary)</em></p>
+<p>| <strong>Part Name/Description</strong> | <strong>Manufacturer/Part Number</strong> |
+|:--------------------|:----|:---------------|
+Voltage regulator |Diodes Incorporated/AP63203WU-7  | 
+Camera | OmniVision/OV2640 |</p>
+<p><em>Table 4: ESP32 S3 Pinout</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Component</strong></th>
+<th style="text-align: left;"><strong>Pin</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Enable button</td>
+<td style="text-align: left;">EN</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO7</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO16</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO17</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO18</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO8</td>
+</tr>
+<tr>
+<td style="text-align: left;">USB D-</td>
+<td style="text-align: left;">IO19</td>
+</tr>
+<tr>
+<td style="text-align: left;">USB D+</td>
+<td style="text-align: left;">IO20</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO46</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO9</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO11</td>
+</tr>
+<tr>
+<td style="text-align: left;">Camera</td>
+<td style="text-align: left;">IO12</td>
+</tr>
+<tr>
+<td style="text-align: left;">encoder SW</td>
+<td style="text-align: left;">IO13</td>
+</tr>
+<tr>
+<td style="text-align: left;">DT</td>
+<td style="text-align: left;">IO14</td>
+</tr>
+<tr>
+<td style="text-align: left;">CLK</td>
+<td style="text-align: left;">IO21</td>
+</tr>
+<tr>
+<td style="text-align: left;">extra</td>
+<td style="text-align: left;">IO47</td>
+</tr>
+<tr>
+<td style="text-align: left;">Boot button</td>
+<td style="text-align: left;">IO0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Reset button</td>
+<td style="text-align: left;">IO35</td>
+</tr>
+<tr>
+<td style="text-align: left;">LED</td>
+<td style="text-align: left;">IO36</td>
+</tr>
+<tr>
+<td style="text-align: left;">TX</td>
+<td style="text-align: left;">IO43</td>
+</tr>
+<tr>
+<td style="text-align: left;">RX</td>
+<td style="text-align: left;">IO44</td>
+</tr>
+</tbody>
+</table>
 
 
 
