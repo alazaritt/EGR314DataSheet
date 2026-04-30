@@ -6,7 +6,7 @@ tags:
 ---
 
 ## Overview
-The Bill of Materials (BOM) outlines all necessary components for the design and assembly of the project. It includes each part’s specifications, quantity, and cost, providing a clear and comprehensive overview of the materials needed for construction. Serving as a key reference document, the BOM ensures component compatibility and reliable production of the final design.
+The Bill of Materials (BOM) outlines all necessary components for the design and assembly of my board. It includes each part’s specifications, quantity, and cost, providing a clear and comprehensive overview of the materials needed for construction. Serving as a key reference document, the BOM ensures component compatibility and reliable production of the final design.
 
 ## Bill of Materials
 
@@ -35,4 +35,5 @@ The Bill of Materials (BOM) outlines all necessary components for the design and
 | Test Point | 7  |  $0.34|  $2.38 | Keystone Electronics | 5006  | [Digikey](https://www.digikey.com/en/products/detail/keystone-electronics/5006/255330) | [Datasheet](https://www.keyelco.com/userAssets/file/K75p62.pdf)   | TP1, TP2, TP3, TP4, TP5, TP6, TP7            |
 | ESP32-S3-WROOM-1-N4 Module      | 1 | $5.06 |$5.06| Espressif       | ESP32-S3-WROOM-1-N4     |    PRLTA109    |[Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)           | U1   |
 | AP63203WU-7 Power IC            | 1 | $0.71 | $0.71 | Diodes Incorporated| AP63203WU-7 |[DigiKey](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858430?)            |[Datasheet](https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf)| U2                       |
+| rotary encoder  | 1  | $3.79| $3.79| Handson Technology    | KY-040 |  [link](https://www.amazon.com/Maxmoral-Encoder-Degrees-Compatible-Development/dp/B07M631J1Q)    | [datasheet](https://www.handsontec.com/dataspecs/module/Rotary%20Encoder.pdf)  | U3            |
 | OV2460 Camera Module  | 1  | $12.99| $12.99| OmniVision      | OV2460 |  [link](https://www.waveshare.com/ov2640-camera-board.htm?srsltid=AfmBOoorlJ7x7ZB5g9TcHGids7ypitjppDPaBI8UHJ-BQPgDLOrUEBfR)    | [datasheet](https://www.uctronics.com/download/cam_module/OV2640DS.pdf?srsltid=AfmBOoob4hM0ZACmY_NcQjcDXsTHbczYfAxuT2rq8YVQIxd6WlVYCT6K)  | U3            |
