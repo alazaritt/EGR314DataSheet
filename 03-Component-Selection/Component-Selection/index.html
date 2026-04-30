@@ -1072,12 +1072,13 @@
 </table>
 <p><strong>Choice:</strong> Option 1: OV2640 camera</p>
 <p><strong>Rationale:</strong> The OV2640 camera provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without too much extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.</p>
-<p>It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.</p>
+<p>It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its software support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.</p>
 <p><em>Table 3: Final Components Selected (summary)</em></p>
 <p>| <strong>Part Name/Description</strong> | <strong>Manufacturer/Part Number</strong> |
 |:--------------------|:----|:---------------|
 Voltage regulator |Diodes Incorporated/AP63203WU-7  | 
-Camera | OmniVision/OV2640 |</p>
+Camera | OmniVision/OV2640 |
+Rotary Encoder | KY-040 |</p>
 <p><em>Table 4: ESP32 S3 Pinout</em></p>
 <table>
 <thead>
@@ -1160,19 +1161,19 @@ Camera | OmniVision/OV2640 |</p>
 <td style="text-align: left;">IO12</td>
 </tr>
 <tr>
-<td style="text-align: left;">encoder SW</td>
+<td style="text-align: left;">Rotary encoder SW</td>
 <td style="text-align: left;">IO13</td>
 </tr>
 <tr>
-<td style="text-align: left;">DT</td>
+<td style="text-align: left;">Rotary encoder DT</td>
 <td style="text-align: left;">IO14</td>
 </tr>
 <tr>
-<td style="text-align: left;">CLK</td>
+<td style="text-align: left;">Rotary encoder CLK</td>
 <td style="text-align: left;">IO21</td>
 </tr>
 <tr>
-<td style="text-align: left;">extra</td>
+<td style="text-align: left;">Extra open pin</td>
 <td style="text-align: left;">IO47</td>
 </tr>
 <tr>
@@ -1188,11 +1189,11 @@ Camera | OmniVision/OV2640 |</p>
 <td style="text-align: left;">IO36</td>
 </tr>
 <tr>
-<td style="text-align: left;">TX</td>
+<td style="text-align: left;">UART TX</td>
 <td style="text-align: left;">IO43</td>
 </tr>
 <tr>
-<td style="text-align: left;">RX</td>
+<td style="text-align: left;">UART RX</td>
 <td style="text-align: left;">IO44</td>
 </tr>
 </tbody>
