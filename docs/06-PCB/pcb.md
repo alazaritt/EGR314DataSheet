@@ -34,11 +34,15 @@ Back Image
 
 Front Image
 
-![image5](https://github.com/alazaritt/EGR314DataSheet/blob/main/docs/06-PCB/ecadfv.png?raw=true)
+<img src="https://github.com/alazaritt/EGR314DataSheet/blob/main/docs/06-PCB/ecadfv.png?raw=true" 
+     width="630" 
+     alt="image5">
 
 Back Image
 
-![image6](https://github.com/alazaritt/EGR314DataSheet/blob/main/docs/06-PCB/bvecad.png?raw=true)
+<img src="https://github.com/alazaritt/EGR314DataSheet/blob/main/docs/06-PCB/bvecad.png?raw=true" 
+     width="630" 
+     alt="image5">
 
 
 A zip file of my ECAD project can be found [here](https://github.com/alazaritt/EGR314DataSheet/releases/download/pcb/individual.subsystem.314.zip) and all gerber files used can be found [here](https://github.com/alazaritt/EGR314DataSheet/releases/download/pcb/camera.gerber.files.zip)
