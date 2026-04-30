@@ -61,7 +61,7 @@ The following sections are the selected major components necessary for the imagi
 **Rationale:** The OV2640 camera provides a good balance of resolution, ease of use, and ESP32 support, to quickly capture images and stream video without too much extra hardware. Its built-in library support and low cost make it ideal for rapid prototyping and embedded camera projects.
 
 
-It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its strong library support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.
+It was selected because it meets the subsystem’s imaging requirements while integrating easily with the ESP32 microcontroller used in the design. It supports up to 2 MP resolution and includes built-in JPEG compression, allowing for efficient image capture and transmission over Wi-Fi without additional processing hardware. This enables reliable image capture, low-resolution video streaming, and efficient packetization. Its software support, low cost, and ease of use use with ESP32 systems make it well suited for this subsystem.
 
 
 
@@ -71,6 +71,7 @@ It was selected because it meets the subsystem’s imaging requirements while in
 |:--------------------|:----|:---------------|
 Voltage regulator |Diodes Incorporated/AP63203WU-7  | 
 Camera | OmniVision/OV2640 |
+Rotary Encoder | KY-040 |
 
 
 *Table 4: ESP32 S3 Pinout*
@@ -95,12 +96,12 @@ Camera | IO9 |
 Camera | IO10 |
 Camera | IO11 | 
 Camera | IO12 |
-encoder SW | IO13 | 
-DT | IO14 | 
-CLK | IO21 | 
-extra | IO47 | 
+Rotary encoder SW | IO13 | 
+Rotary encoder DT | IO14 | 
+Rotary encoder CLK | IO21 | 
+Extra open pin | IO47 | 
 Boot button | IO0 | 
 Reset button | IO35 | 
 LED | IO36 | 
-TX | IO43 | 
-RX | IO44 | 
+UART TX | IO43 | 
+UART RX | IO44 | 
