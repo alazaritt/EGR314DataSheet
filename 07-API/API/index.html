@@ -906,6 +906,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#team-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team IDs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#message-type-4-camera-status-report" class="md-nav__link">
     <span class="md-ellipsis">
       Message Type 4 — Camera Status Report
@@ -943,6 +952,48 @@
       Outgoing Message Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Outgoing Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-exchange-camera-status-request-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packet Exchange — Camera Status Request &amp; Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-node-to-hmi-camera-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Node to HMI (Camera Status Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-breakdown-camera-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload Breakdown — Camera Status Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoder-status-response-hmi-request-to-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoder Status Response (HMI Request to Camera)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1207,6 +1258,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#team-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team IDs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#message-type-4-camera-status-report" class="md-nav__link">
     <span class="md-ellipsis">
       Message Type 4 — Camera Status Report
@@ -1244,6 +1304,48 @@
       Outgoing Message Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Outgoing Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-exchange-camera-status-request-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packet Exchange — Camera Status Request &amp; Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-node-to-hmi-camera-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Node to HMI (Camera Status Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-breakdown-camera-status-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload Breakdown — Camera Status Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoder-status-response-hmi-request-to-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoder Status Response (HMI Request to Camera)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1288,7 +1390,60 @@
 <h2 id="messages-sent">Messages Sent</h2>
 <p>This subsystem sends two main message types:
 Message Type 4 – Camera Status Report and Message Type 5 – Encoder Status Report.
-Both are structured according to the shared UART protocol and are transmitted only in response to valid requests from the HMI.</p>
+Both are structured according to the shared UART protocol and are transmitted only in response to valid requests from the HMI.
+All message fields use fixed width integer types (uint8_t, uint16_t) that are consistent with the UART protocol definition.</p>
+<h3 id="team-ids"><em>Team IDs</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Subsystem Role</th>
+<th>Board ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Christo</td>
+<td>HMI Interface</td>
+<td>0x43</td>
+</tr>
+<tr>
+<td>Liam</td>
+<td>Motor Control</td>
+<td>0x4C</td>
+</tr>
+<tr>
+<td>Isaiah</td>
+<td>Environmental Sensing</td>
+<td>0x49</td>
+</tr>
+<tr>
+<td>Arianna</td>
+<td>Camera</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>Myles</td>
+<td>Distance Sensing</td>
+<td>0x4D</td>
+</tr>
+<tr>
+<td>Ragul</td>
+<td>Gyroscope</td>
+<td>0x52</td>
+</tr>
+<tr>
+<td>Damian</td>
+<td>MQTT</td>
+<td>0x44</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Broadcast</td>
+<td>0x58</td>
+</tr>
+</tbody>
+</table>
 <h3 id="message-type-4-camera-status-report"><em>Message Type 4 — Camera Status Report</em></h3>
 <table>
 <thead>
@@ -1344,7 +1499,7 @@ Both are structured according to the shared UART protocol and are transmitted on
 </tr>
 </tbody>
 </table>
-<p>The camera subsystem does not transmit image frames. Instead, it periodically evaluates whether a camera is present using an I2C scan and assigns a simplified state:</p>
+<p>The camera subsystem does not transmit image frames. Instead, it periodically evaluates whether a camera is present using an I2C scan for the expected device address and assigns a simplified state:</p>
 <ul>
 <li>Camera present = state set to capturing</li>
 <li>Camera missing for multiple checks = state set to off with an error code</li>
@@ -1415,6 +1570,189 @@ Both are structured according to the shared UART protocol and are transmitted on
 <li>Forwarding of unrelated messages is prioritized over generating new outgoing data</li>
 <li>All outgoing messages follow the shared UART packet structure with proper framing and addressing</li>
 </ul>
+<p>The following 2 tables define the complete packet structure used when the HMI requests camera status information. It includes both the request format sent to the camera subsystem and the corresponding response format returned by it. These packets follow the shared UART protocol and demonstrate how the request travels through the system and triggers a structured response.</p>
+<h3 id="packet-exchange-camera-status-request-response"><em>Packet Exchange — Camera Status Request &amp; Response</em></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+<th>Byte 5</th>
+<th>Byte 6–61</th>
+<th>Byte 62–63</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>prefix</td>
+<td>sender_id</td>
+<td>receiver_id</td>
+<td>msg_type</td>
+<td>payload</td>
+<td>suffix</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t[2]</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t[57]</td>
+<td>uint8_t[2]</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>0xA5 0x5A</td>
+<td>0x43</td>
+<td>0x41</td>
+<td>0x14</td>
+<td>0x04 ...</td>
+<td>0x59 0x42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="camera-node-to-hmi-camera-status-response"><em>Camera Node to HMI (Camera Status Response)</em></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+<th>Byte 5</th>
+<th>Byte 6–61</th>
+<th>Byte 62–63</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>prefix</td>
+<td>sender_id</td>
+<td>receiver_id</td>
+<td>msg_type</td>
+<td>payload</td>
+<td>suffix</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t[2]</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t[57]</td>
+<td>uint8_t[2]</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>0xA5 0x5A</td>
+<td>0x41</td>
+<td>0x43</td>
+<td>0x04</td>
+<td>0x00 02 00 05 00 04 00 ...</td>
+<td>0x59 0x42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payload-breakdown-camera-status-response"><em>Payload Breakdown — Camera Status Response</em></h3>
+<p>Once a valid camera status request is received and processed, my subsystem generates a response packet addressed back to the HMI. This response follows the same communication structure as the request but contains system specific status information derived from an I2C device scan. The payload encodes the current camera state along with configuration and error data.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3–4</th>
+<th>Byte 5–6</th>
+<th>Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>reserved</td>
+<td>camera_state</td>
+<td>frame_width</td>
+<td>frame_height</td>
+<td>error_code</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint16_t</td>
+<td>uint16_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>0</td>
+<td>2</td>
+<td>1280</td>
+<td>1024</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="encoder-status-response-hmi-request-to-camera"><em>Encoder Status Response (HMI Request to Camera)</em></h3>
+<p>This defines the packet structure used for retrieving rotary encoder data from my subsystem. Similar to the camera status exchange, the HMI sends a request message that triggers a response containing encoder counters. The encoder values reflect real time input tracking and are transmitted only when explicitly requested through the shared UART protocol.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+<th>Byte 5</th>
+<th>Byte 6–7</th>
+<th>Byte 8–9</th>
+<th>Byte 10–11</th>
+<th>Byte 12–61</th>
+<th>Byte 62–63</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>prefix</td>
+<td>sender_id</td>
+<td>receiver_id</td>
+<td>msg_type</td>
+<td>forward_lo</td>
+<td>forward_hi</td>
+<td>back_lo</td>
+<td>payload</td>
+<td>suffix</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t[2]</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t[57]</td>
+<td>uint8_t[2]</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>0xA5 0x5A</td>
+<td>0x41</td>
+<td>0x43</td>
+<td>0x05</td>
+<td>varies</td>
+<td>varies</td>
+<td>varies</td>
+<td>0x00 ...</td>
+<td>0x59 0x42</td>
+</tr>
+</tbody>
+</table>
 
 
 
