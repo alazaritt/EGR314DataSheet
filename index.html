@@ -1173,7 +1173,7 @@ as part of<br>
 <font size="8"> Rover Project</font><br>
 for<br>
 <font size="5"> Team 305 </font><br><p></p>
-<p><strong>Submission: May 1, 2026</strong>
+<p><strong>Submission: May 4, 2026</strong>
 </p></center><p></p>
 <h2 id="introduction">Introduction</h2>
 <p>This datasheet provides an overview of the camera imaging board, a key component within my team's rover system, explaining its design, functionality, and integration within the overall project. It includes a block diagram illustrating how the camera, microcontroller, and other hardware pieces interact to capture video image, and explanations of module requirements, component selection, the circuit schematic and PCB, the board’s power budget, and all code used to run it. This document should serve as a technical reference and provide a clear understanding of the board’s operation and its contribution to my team’s overall project.</p>
@@ -1182,8 +1182,9 @@ for<br>
 <p>The subsystems communicate through a UART-based daisy-chain network that allows boards to pass data and status messages between one another. This structure enables the rover to relay telemetry to a base station or local display while coordinating the operation of the different modules.
 More details on project requirements, user needs, and other aspects of the overall system can be found in the <a href="https://egr314-s-2026-30.github.io/EGR314-S-2026-305.github.io/">team report.</a></p>
 <h3 id="my-contribution">My Contribution</h3>
-<p>My contribution to the system is the imaging subsystem. This board integrates a camera module that captures video from the rover’s field of view and streams it to a display, providing users with real time visual feedback and contributing to the project’s user interface requirement. This enables users to monitor the environment and observe navigation and observation while the rover is in use.</p>
+<p>My contribution to the system is the imaging subsystem. This board integrates a camera module that captures images from the rover’s field of view and sends out the corresponding data packets. This enables users to monitor the environment and observe navigation and observation while the rover is in use.</p>
 <p>A microcontroller on the board manages camera configuration and communication, ensuring proper operation of the camera while interfacing with the rest of the rover’s network. The microcontroller also relays messages and data between other subsystem boards as part of the rover’s UART daisy-chain communication.</p>
+<p>Although the board was originally designed specifically for camera functionality, its use was later extended by integrating a rotary encoder through extra available GPIO pins. This addition allowed the subsystem to support manual user input, enhancing interactivity and demonstrating the flexibility of the design beyond its initial scope.</p>
 <p>To see functions and prioritization of goals within the subsytem, see the <a href="https://alazaritt.github.io/EGR314DataSheet/01-Requirements/Requirements/">Requirements</a> section</p>
 <p>To see how all components within the subsytem communicate and interact, see the <a href="https://alazaritt.github.io/EGR314DataSheet/02-Block-Diagram/Block-Diagram/">Block Diagram</a> section of the datasheet.</p>
 <p>For additional reasoning of why individual components were selected, please see the <a href="https://alazaritt.github.io/EGR314DataSheet/03-Component-Selection/Component-Selection/">Component selection</a> section of the datasheet.</p>
