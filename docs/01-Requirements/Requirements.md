@@ -3,7 +3,7 @@ title: Module's Requirements
 ---
 
 ## Module Requirements
-The table below outlines the critical requirements for the Imaging Control subsystem. This subsystem is responsible for controlling the rover’s camera, capturing images and video, packetizing the data for transmission, and providing status feedback to the operator. The table outlines the minimum acceptable performance, the target goals, and optional stretch requirements for each feature within the subsystem. Specifying these measures allows to systematically verify that the subsystem meets both functional and integration expectations
+The table below outlines the initla critical requirements that were outlined for the Imaging Control subsystem. This subsystem is responsible for controlling the rover’s camera, capturing images and video, packetizing the data for transmission, and providing status feedback to the operator. The table outlines the minimum acceptable performance, the target goals, and optional stretch requirements for each feature within the subsystem. Specifying these measures allows to systematically verify that the subsystem meets both functional and integration expectations
 
 Each requirement in the table is tied to a measurable outcome so it can be determined whether the subsystem performs at a threshold level, meets the target performance, or exceeds expectations with enhanced features. This structured approach ensures that design decisions are justified, potential risks are identified early, and the subsystem integrates seamlessly with my team’s overall rover system.
 
