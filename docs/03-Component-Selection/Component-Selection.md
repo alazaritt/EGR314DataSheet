@@ -73,6 +73,8 @@ Voltage regulator |Diodes Incorporated/AP63203WU-7  |
 Camera | OmniVision/OV2640 |
 Rotary Encoder | KY-040 |
 
+The camera subsystem did not work as originally intended, as it could only capture still images and transmit raw data packets rather than support continuous video streaming or reconstruct the image on the receiving end. To demonstrate system functionality due to this limitation, a rotary encoder was later integrated using available pins to provide a reliable form of user input and interaction. Since this component was already on hand, no in depth component selection occured for it
+
 
 *Table 4: ESP32 S3 Pinout*
 
