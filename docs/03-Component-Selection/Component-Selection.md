@@ -68,7 +68,7 @@ It was selected because it meets the subsystem’s imaging requirements while in
 *Table 3: Final Components Selected (summary)*
 
 | **Part Name/Description** | **Manufacturer/Part Number** |
-|:--------------------|:----|:---------------|
+|:--------------------|:---------------|
 Voltage regulator |Diodes Incorporated/AP63203WU-7  | 
 Camera | OmniVision/OV2640 |
 Rotary Encoder | KY-040 |
