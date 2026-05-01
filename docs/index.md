@@ -11,7 +11,7 @@ as part of<br>
 for<br>
 <font size= "5"> Team 305 </font><br>
 
-**Submission: May 1, 2026**
+**Submission: May 4, 2026**
 </center>
 
 ## Introduction
@@ -27,9 +27,11 @@ More details on project requirements, user needs, and other aspects of the overa
 
 ### My Contribution
 
-My contribution to the system is the imaging subsystem. This board integrates a camera module that captures video from the rover’s field of view and streams it to a display, providing users with real time visual feedback and contributing to the project’s user interface requirement. This enables users to monitor the environment and observe navigation and observation while the rover is in use.
+My contribution to the system is the imaging subsystem. This board integrates a camera module that captures images from the rover’s field of view and sends out the corresponding data packets. This enables users to monitor the environment and observe navigation and observation while the rover is in use.
 
 A microcontroller on the board manages camera configuration and communication, ensuring proper operation of the camera while interfacing with the rest of the rover’s network. The microcontroller also relays messages and data between other subsystem boards as part of the rover’s UART daisy-chain communication.
+
+Although the board was originally designed specifically for camera functionality, its use was later extended by integrating a rotary encoder through extra available GPIO pins. This addition allowed the subsystem to support manual user input, enhancing interactivity and demonstrating the flexibility of the design beyond its initial scope.
 
 
 
